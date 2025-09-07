@@ -15,15 +15,15 @@
     <div class="top-strip">
         <div class="container">
             <div class="left">
-                <span>📞 Helpline: 1800-XXX-XXXX</span>
-                <span>✉️ info@gaushala.org</span>
+                <span class="contact-item">📞 Helpline: 1800-XXX-XXXX</span>
+                <span class="contact-item">✉️ info@gaushala.org</span>
             </div>
             <div class="right">
                 <a href="#" class="language-switch">मराठी</a>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -49,11 +49,16 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#home" class="nav-link">🏠 Home</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">ℹ️ About Us</a></li>
-                <li class="nav-item">
-                    <a href="#activities" class="nav-link">🐄 Gaushala Activities</a>
+                <li class="nav-item dropdown-parent">
+                    <a href="#activities" class="nav-link">🐄 Gaushala Activities <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown">
                         <a href="#cattle-care" class="nav-link">Cattle Care</a>
                         <a href="#organic-farming" class="nav-link">Organic Farming</a>
@@ -80,8 +85,10 @@
         <div class="hero-content">
             <h2>🕉️ Serving Gau Mata, Preserving Culture 🕉️</h2>
             <p>गोमाता की सेवा में समर्पित • Dedicated to the service of Mother Cow</p>
-            <a href="#about" class="hero-btn">Learn More</a>
-            <a href="#donation" class="hero-btn">Support Us</a>
+            <div class="hero-buttons">
+                <a href="#about" class="hero-btn">Learn More</a>
+                <a href="#donation" class="hero-btn">Support Us</a>
+            </div>
         </div>
     </section>
 
@@ -139,22 +146,22 @@
         <section class="section" id="gallery">
             <h2 class="section-title">📷 Gallery</h2>
             <div class="gallery-grid">
-                <div class="gallery-item" onclick="openModal(this)">
+                <div class="gallery-item" onclick="openModal(this)" tabindex="0" role="button" aria-label="View Healthy Cattle Care">
                     <div class="gallery-overlay">🐄 Healthy Cattle Care</div>
                 </div>
-                <div class="gallery-item" onclick="openModal(this)">
+                <div class="gallery-item" onclick="openModal(this)" tabindex="0" role="button" aria-label="View Organic Farm Fields">
                     <div class="gallery-overlay">🌱 Organic Farm Fields</div>
                 </div>
-                <div class="gallery-item" onclick="openModal(this)">
+                <div class="gallery-item" onclick="openModal(this)" tabindex="0" role="button" aria-label="View Daily Prayer Sessions">
                     <div class="gallery-overlay">🙏 Daily Prayer Sessions</div>
                 </div>
-                <div class="gallery-item" onclick="openModal(this)">
+                <div class="gallery-item" onclick="openModal(this)" tabindex="0" role="button" aria-label="View Community Volunteers">
                     <div class="gallery-overlay">👥 Community Volunteers</div>
                 </div>
-                <div class="gallery-item" onclick="openModal(this)">
+                <div class="gallery-item" onclick="openModal(this)" tabindex="0" role="button" aria-label="View Festival Celebrations">
                     <div class="gallery-overlay">🎉 Festival Celebrations</div>
                 </div>
-                <div class="gallery-item" onclick="openModal(this)">
+                <div class="gallery-item" onclick="openModal(this)" tabindex="0" role="button" aria-label="View Veterinary Services">
                     <div class="gallery-overlay">🏥 Veterinary Services</div>
                 </div>
             </div>
@@ -162,8 +169,8 @@
 
         <!-- Donation Section -->
         <section class="donation-section" id="donation">
-            <h2 style="font-size: 36px; margin-bottom: 20px;">💝 Support Our Noble Cause</h2>
-            <p style="font-size: 18px; margin-bottom: 30px;">Your contribution helps us serve Gau Mata and preserve our cultural heritage. Every donation makes a difference!</p>
+            <h2 class="donation-title">💝 Support Our Noble Cause</h2>
+            <p class="donation-subtitle">Your contribution helps us serve Gau Mata and preserve our cultural heritage. Every donation makes a difference!</p>
             
             <div class="donation-methods">
                 <div class="donation-method">
@@ -197,25 +204,25 @@
                     <div class="product-icon">🥛</div>
                     <h3>Pure Cow Milk</h3>
                     <p>Fresh, organic milk from healthy, well-cared cattle. Rich in nutrients and completely natural.</p>
-                    <button class="hero-btn" onclick="alert('Product details...')">Order Now</button>
+                    <button class="hero-btn product-btn">Order Now</button>
                 </div>
                 <div class="product-card">
                     <div class="product-icon">🧈</div>
                     <h3>Desi Ghee</h3>
                     <p>Traditional A2 ghee made using ancient methods. Pure, aromatic, and full of health benefits.</p>
-                    <button class="hero-btn" onclick="alert('Product details...')">Order Now</button>
+                    <button class="hero-btn product-btn">Order Now</button>
                 </div>
                 <div class="product-card">
                     <div class="product-icon">🍯</div>
                     <h3>Organic Honey</h3>
                     <p>Pure honey from our organic farms. Natural sweetener with medicinal properties.</p>
-                    <button class="hero-btn" onclick="alert('Product details...')">Order Now</button>
+                    <button class="hero-btn product-btn">Order Now</button>
                 </div>
                 <div class="product-card">
                     <div class="product-icon">🌿</div>
                     <h3>Ayurvedic Products</h3>
                     <p>Traditional medicines and health products made from cow-based ingredients and herbs.</p>
-                    <button class="hero-btn" onclick="alert('Product details...')">Order Now</button>
+                    <button class="hero-btn product-btn">Order Now</button>
                 </div>
             </div>
         </section>
@@ -252,12 +259,12 @@
                 <div class="footer-section">
                     <h4>🌐 Follow Us</h4>
                     <div class="social-icons">
-                        <a href="#" style="margin-right: 15px;"><i class="fab fa-facebook fa-2x"></i></a>
-                        <a href="#" style="margin-right: 15px;"><i class="fab fa-twitter fa-2x"></i></a>
-                        <a href="#" style="margin-right: 15px;"><i class="fab fa-instagram fa-2x"></i></a>
-                        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube fa-2x"></i></a>
                     </div>
-                    <p style="margin-top: 20px;">Subscribe to our newsletter for updates</p>
+                    <p class="newsletter-text">Subscribe to our newsletter for updates</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -267,8 +274,8 @@
     </footer>
 
     <!-- Modal for Gallery -->
-    <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
+    <div id="imageModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <span class="close" onclick="closeModal()" aria-label="Close modal">&times;</span>
         <div class="modal-content" id="modalImage"></div>
     </div>
 
